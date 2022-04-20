@@ -1,0 +1,13 @@
+create table student(student_id number(5),fname varchar(20),lname varchar(20),age number(5));
+insert into student(student_id,fname,lname,age) values(1,'naveena','manivel',20);
+insert into student(student_id,fname,lname,age) values(2,'keerthana','manivel',19);
+insert into student(student_id,fname,lname,age) values(3,'kalaiselvi','manivel',35);
+alter table student add marks float(10);
+desc student;
+insert into student(student_id,fname,lname,age)  values(4,'naveena','manivel',30);
+select * from student where age=30;
+update student set age=40 where student_id=1;
+select * from student;
+alter table student add constraint s_id primary key (student_id);
+select distinct age from student;
+select fname,count(fname)from student group by fname having count(fname)<2;
